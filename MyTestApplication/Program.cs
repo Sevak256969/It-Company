@@ -19,7 +19,7 @@ namespace MyTestApplication
             a = 5;
             List<Employee> list1 = new List<Employee>();
             List<Employee> list2 = list1;
-            list1.Add(new Employee());
+            //list1.Add(new Employee());
             int size1 = list1.Count();
             int size2 = list2.Count();
             list1 = null;

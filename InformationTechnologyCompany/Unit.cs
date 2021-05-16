@@ -133,62 +133,6 @@ namespace InformationTechnologyCompany
         {
             Console.WriteLine(this.ToString());
         }
-
-
-        //stringBuilder.AppendFormat("name = {0}, unit id = {1}, " +
-        //    "create date = {2}, update date  = {3}, end date = {4} {5}",
-        //    this.Name, this.UnitId, this.CreateDate, this.UpdateDate, this.EndDate, this.UnitType);
-
-        /*  protected bool AddMember( T member,bool updateMaxCompany)
-          {
-              int count = memberList.Count;
-              //memberList.Add(member);
-              //Console.WriteLine(member.ToString());
-              if(count== maxCapacity)
-              {
-                  if(updateMaxCompany)
-                  {
-                      memberList.Add(member);
-                      maxCapacity++;
-                  }else
-                  {
-                      return false;
-                  }
-              }else
-              {
-                  memberList.Add(member);
-              }return true;
-          }
-
-          protected bool RemoveMember(T member, bool updateMinCompany)
-          {
-              int count = memberList.Count;
-              memberList.Add(member);
-              //Console.WriteLine(member.ToString());
-              if(!this.memberList.Contains(member))
-              {
-                  return false;
-              }
-              if (count == minCapacity)
-              {
-                  if (updateMinCompany)
-                  {
-                      memberList.Remove(member);
-                      minCapacity++;
-                  }
-                  else
-                  {
-                      return false;
-                  }
-              }
-              else
-              {
-                  memberList.Remove(member);
-              }
-              return true;
-          }*/
-
-
     }
 
 }
