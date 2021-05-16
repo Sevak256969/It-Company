@@ -25,8 +25,8 @@ namespace InformationTechnologyCompany
             string email = TestUtil.GetRandomEmail(10);
             string phoneNumber = TestUtil.GetRandomPhoneNumber();
             string personalId = TestUtil.getGuid();
-            Employee employee = new Employee(specialistType, qualificationLevel, personalId, firstName,
-               phoneNumber, email, lastName, birthDate);
+            Employee employee = new Employee(specialistType, qualificationLevel, personalId, firstName, lastName,
+               phoneNumber, email,  birthDate);
             // Console.WriteLine(employee.ToString());
             return employee;
         }
