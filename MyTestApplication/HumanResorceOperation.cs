@@ -53,18 +53,18 @@ namespace InformationTechnologyCompany
             }
             return false;
         }
-        public Company CreatCompany(string name, string phone, string email, string adres)
+        public Company CreatCompany(string name, string phone, string email, string address)
         {
-            Company company = new Company(name, phone, email, adres);
+            Company company = new Company(name, phone, email, address);
             companyPool.Add(company.UnitId, company);
             return company;
         }
 
-        public void UpdateCompanyPhone(Company company, string name)
+        public void UpdateCompanyPhone(Company company, string phone)
         {
             company.Phone = phone;
         }
-        public void UpdateCompanyEmail(Company company, string name)
+        public void UpdateCompanyEmail(Company company, string email)
         {
             company.Email = email;
         }
@@ -89,7 +89,7 @@ namespace InformationTechnologyCompany
         
 
         public Employee Hire(string personalId, string firstName, string lastName, string numberPhone, string email, 
-            DateTime birthDate,SpecialistType specialistType, QualificationLevel qualificationLevel,)
+            DateTime birthDate,SpecialistType specialistType, QualificationLevel qualificationLevel)
         {
             
             
@@ -170,9 +170,11 @@ namespace InformationTechnologyCompany
         }
         private Team GetTeamById(string teamId)
         {
-            if(teamPool.ContainsKey(teamId))
+            _ = new Team("default team");
+            if (teamPool.ContainsKey(teamId))
             {
-                return teamPool.GetValueOrDefalut(teamId, null);
+           
+                teamPool.TryGetValue(teamId, out _);
             }
             return null;
         }

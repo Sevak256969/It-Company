@@ -9,11 +9,24 @@ namespace InformationTechnologyCompany
     public class Company : Unit<Department>
     {
         Employee chiefExecutiveOfficer;
+        string phone;
+        string address;
+        string email;
         public Company(string name) : base(name, UnitType.Company)
         {
 
 
         }
+        public Company(string name,string email, string phone, string address) : base(name, UnitType.Company)
+        {
+            this.phone = phone;
+            this.email = email;
+            this.address = address;
+           
+               
+
+        }
+
 
         public Employee ChiefExecutiveOfficer
         {
@@ -25,7 +38,9 @@ namespace InformationTechnologyCompany
             }
         }
 
-
+        public string Phone { get => phone; set => phone = value; }
+        public string Adress { get => address; set => address = value; }
+        public string Email { get => email; set => email = value; }
 
         public void AddDepartament(Department department)
         {
